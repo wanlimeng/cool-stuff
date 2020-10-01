@@ -2,11 +2,11 @@
 
 For my project, I will analyze `dataR2.csv`, which is the Breast Cancer Coimbra Data Set obtained from UCI Machine Learning Repository. 
 
-To analyze the data you will need to install some `R` packages: `sjPlot`, `sjmisc`, `sjlabelled`. The required packages can be installed using the following `R` commands.
+To analyze the data you will need to install some `R` packages: `sjPlot`, `sjmisc`, `sjlabelled`, `knitr`. The required packages can be installed using the following `R` commands.
 
 ```{r}
 installed_pkgs <- row.names(installed.packages())
-pkgs <- c("sjPlot", "sjmisc", "sjlabelled")
+pkgs <- c("sjPlot", "sjmisc", "sjlabelled", "knitr")
 for(p in pkgs){
 	if(!(p %in% install_pkgs)){
 		install.packages(p)
