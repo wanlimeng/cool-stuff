@@ -16,6 +16,7 @@ for(p in pkgs){
 
 ## Execute the analysis
 
+`report.Rmd` and `dataR2.csv` should be in the same folder.\
 To execute the analysis, from the project folder you can run
 
 ```{r}
