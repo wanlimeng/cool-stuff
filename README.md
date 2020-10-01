@@ -4,7 +4,7 @@ For my project, I will analyze `dataR2.csv`, which is the Breast Cancer Coimbra 
 
 To analyze the data you will need to install some `R` packages: `sjPlot`, `sjmisc`, `sjlabelled`, `knitr`. The required packages can be installed using the following `R` commands.
 
-```{r}
+``` r
 installed_pkgs <- row.names(installed.packages())
 pkgs <- c("sjPlot", "sjmisc", "sjlabelled", "knitr")
 for(p in pkgs){
@@ -19,7 +19,7 @@ for(p in pkgs){
 `report.Rmd` and `dataR2.csv` should be in the same folder.\
 To execute the analysis, from the project folder you can run
 
-```{r}
+``` bash
 Rscript -e "rmarkdown::render('report.Rmd')"
 ```
 
