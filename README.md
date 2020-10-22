@@ -2,16 +2,12 @@
 
 For my project, I will analyze `dataR2.csv`, which is the Breast Cancer Coimbra Data Set obtained from UCI Machine Learning Repository. 
 
-To analyze the data you will need to install some `R` packages: `sjPlot`, `sjmisc`, `sjlabelled`, `knitr`. The required packages can be installed using the following `R` commands.
+## Install R packages
 
-``` r
-installed_pkgs <- row.names(installed.packages())
-pkgs <- c("sjPlot", "sjmisc", "sjlabelled", "knitr")
-for(p in pkgs){
-	if(!(p %in% installed_pkgs)){
-		install.packages(p)
-	}
-}
+To analyze the data you will need to install some `R` packages. The required packages can be installed by running the following command from the project folder. 
+
+``` bash
+make install
 ```
 
 ## Execute the analysis
@@ -19,7 +15,16 @@ for(p in pkgs){
 To execute the analysis, from the project folder you can run
 
 ``` bash
-Rscript -e "rmarkdown::render('report.Rmd')"
+make report.html
 ```
 
 This will create a file called `report.html` output in your directory that contains the results. 
+
+
+## Makefile help
+
+To get some information about the Makefile, from the project folder you can run
+
+``` bash
+make help
+```
