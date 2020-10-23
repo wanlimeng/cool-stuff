@@ -5,7 +5,7 @@ install: R/install_pkgs.R
 	Rscript R/install_pkgs.R
 
 # rule for making report  
-report.html: clean_data/cleandata.csv R/report.Rmd figure/fig1.png figure/fig2.png figure/fig3.png figure/fig4.png
+report.html: raw_data/dataR2.csv R/report.Rmd figure/fig1.png figure/fig2.png figure/fig3.png figure/fig4.png
 	cd R && \
 	Rscript -e "rmarkdown::render('report.Rmd', output_file = '../report.html')"
 
