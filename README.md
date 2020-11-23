@@ -34,7 +34,7 @@ This will pull a Docker image called `wanlimeng/cancer-proj` from my DockerHub.\
 ### Generate final report (Docker)
 Next, you will need to run the container and mount your local `cool-stuff` project folder to the project directory in the container in order to be able to view the output on your local device.
 
-1. If your `cool-stuff` project folder is in the root directory, run the following command
+**1.** If your `cool-stuff` project folder is in the root directory, run the following command
 
 ``` bash
 docker run -v ~/cool-stuff:/project wanlimeng/cancer-proj
@@ -43,7 +43,7 @@ docker run -v ~/cool-stuff:/project wanlimeng/cancer-proj
 This will generate a final report called `report.html` in the `output` folder inside your `cool-stuff` project folder. 
 
 
-2. If your project folder is not in the root directory, modify the path before the : to reflect where the `cool-stuff` project folder is on your local device and run the following modified command
+**2.** If your project folder is not in the root directory, modify the path before the : to reflect where the `cool-stuff` project folder is on your local device and run the following modified command
 
 ``` bash
 docker run -v ~/your/local/path/to/cool-stuff:/project wanlimeng/cancer-proj
@@ -52,7 +52,7 @@ docker run -v ~/your/local/path/to/cool-stuff:/project wanlimeng/cancer-proj
 This will also generate a final report called `report.html` in the `output` folder inside your `cool-stuff` project folder. 
 
 
-3. If you do not have the `cool-stuff` project folder downloaded, you can also run the analysis by running the following command
+**3.** If you do not have the `cool-stuff` project folder downloaded, you can also run the analysis by running the following command
 
 ``` bash
 docker run -v ~/cancer_output:/project/output wanlimeng/cancer-proj
