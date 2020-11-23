@@ -29,7 +29,7 @@ In order to analyze the data, you need to pull a Docker image from DockerHub usi
 docker pull wanlimeng/cancer-proj
 ```
 
-This will pull a Docker image called `wanlimeng/cancer-proj` from my DockerHub.\
+This will pull a Docker image called `wanlimeng/cancer-proj` from my DockerHub.
 
 ### Generate final report (Docker)
 Next, you will need to run the container and mount your local `cool-stuff` project folder to the project directory in the container in order to be able to view the output on your local device.
