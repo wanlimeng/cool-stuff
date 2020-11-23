@@ -79,7 +79,7 @@ To generate the final report, from the project folder you can run
 make report
 ```
 
-This will generate a final report called `report.html` in the `cool-stuff` project folder.
+This will generate a final report called `report.html` in the `output` folder inside your `cool-stuff` project folder. 
 
 ### Build a Docker image using Make
 To build a Docker image of the project folder, from the project folder you can run
