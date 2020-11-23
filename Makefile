@@ -20,16 +20,18 @@ figure/%.png: R/make_%.R clean_data/cleandata.csv
 	chmod +x R/make_$*.R && \
 	Rscript R/make_$*.R
 
-.PHONY: help
-help:
-	@echo "report.html   : Generate final analysis report."
-	@echo "cleandata.csv : Clean raw data dataR2.csv."
-	@echo "fig1.png      : Boxplot of Glucose."
-	@echo "fig2.png      : Boxplot of Insulin."
-	@echo "fig3.png      : Boxplot of HOMA."
-	@echo "fig4.png      : Boxplot of Resistin."
-
 # rule for making a Docker image
 .PHONY: build
 build: Dockerfile
 	docker build -t cancer-proj .
+
+.PHONY: help
+help:
+	@echo "report                   : Generate final analysis report."
+	@echo "clean_data/cleandata.csv : Clean raw data dataR2.csv."
+	@echo "figure/fig1.png          : Boxplot of Glucose."
+	@echo "figure/fig2.png          : Boxplot of Insulin."
+	@echo "figure/fig3.png          : Boxplot of HOMA."
+	@echo "figure/fig4.png          : Boxplot of Resistin."
+	@echo "install                  : Install needed R packages
+	@echo "build                    : Build a Docker image
