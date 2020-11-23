@@ -33,5 +33,5 @@ help:
 	@echo "figure/fig2.png          : Boxplot of Insulin."
 	@echo "figure/fig3.png          : Boxplot of HOMA."
 	@echo "figure/fig4.png          : Boxplot of Resistin."
-	@echo "install                  : Install needed R packages
-	@echo "build                    : Build a Docker image
+	@echo "install                  : Install needed R packages."
+	@echo "build                    : Build a Docker image called cancer-proj."
