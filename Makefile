@@ -5,9 +5,10 @@ install: R/install_pkgs.R
 	Rscript R/install_pkgs.R
 
 # rule for making report  
-report.html: raw_data/dataR2.csv R/report.Rmd figure/fig1.png figure/fig2.png figure/fig3.png figure/fig4.png
+.PHONY: report
+report: raw_data/dataR2.csv R/report.Rmd figure/fig1.png figure/fig2.png figure/fig3.png figure/fig4.png
 	cd R && \
-	Rscript -e "rmarkdown::render('report.Rmd', output_file = '../report.html')"
+	Rscript -e "rmarkdown::render('report.Rmd', output_file = '../output/report.html')"
 
 # rule for cleaning data
 clean_data/cleandata.csv: R/clean_data.R raw_data/dataR2.csv
@@ -27,4 +28,9 @@ help:
 	@echo "fig2.png      : Boxplot of Insulin."
 	@echo "fig3.png      : Boxplot of HOMA."
 	@echo "fig4.png      : Boxplot of Resistin."
+
+.PHONY: build
+build: Dockerfile
+	docker build -t cancer-proj . && \
+	docker run -v ~/cool-stuff:/project cancer-proj
 
