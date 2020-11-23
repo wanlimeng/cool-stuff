@@ -29,8 +29,7 @@ help:
 	@echo "fig3.png      : Boxplot of HOMA."
 	@echo "fig4.png      : Boxplot of Resistin."
 
+# rule for making a Docker image
 .PHONY: build
 build: Dockerfile
-	docker build -t cancer-proj . && \
-	docker run -v ~/cool-stuff:/project cancer-proj
-
+	docker build -t cancer-proj .
