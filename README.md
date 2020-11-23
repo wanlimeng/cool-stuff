@@ -1,4 +1,4 @@
-## My project
+# My project
 
 For this project, I will analyze `dataR2.csv`, which is the Breast Cancer Coimbra Data Set obtained from UCI Machine Learning Repository. Clinical features were observed or measured for 64 patients with breast cancer and 52 healthy controls. There are 10 predictors, all quantitative, and a binary dependent variable, indicating the presence or absence of breast cancer.
 The predictors are anthropometric data and parameters which can be gathered in routine blood analysis.
@@ -19,7 +19,7 @@ There are two ways to run the analysis using Docker or Make. If you have Docker 
 
 
 
-## Execute the analysis using Docker
+# Execute the analysis using Docker
 In order to run the following commands, make sure you are in the `cool-stuff` project folder on the command line.
 
 ### Download a built Docker image from DockerHub
@@ -62,7 +62,7 @@ This will generate a final report called `report.html` in the `cancer_output` fo
 
 
 
-## Execute the analysis using Make
+# Execute the analysis using Make
 In order to run the following commands, make sure you are in the `cool-stuff` project folder on the command line.
 
 ### Install R packages
@@ -79,7 +79,7 @@ To generate the final report, from the project folder you can run
 make report
 ```
 
-This will create a file called `report.html` in the `cool-stuff` project folder.
+This will generate a final report called `report.html` in the `cool-stuff` project folder.
 
 ### Build a Docker image using Make
 To build a Docker image of the project folder, from the project folder you can run
@@ -88,7 +88,7 @@ To build a Docker image of the project folder, from the project folder you can r
 make build
 ```
 
-This will build a Docker image called cancer-proj.
+This will build a Docker image called `cancer-proj`.
 
 ### Makefile help
 To get some helpful information about the Makefile, from the project folder you can run
